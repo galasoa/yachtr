@@ -1,0 +1,33 @@
+.cards-selling-points {
+  width: 100vw;
+}
+
+.card-img-to-right,
+.card-img-to-left {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+
+  .card-img {
+    // background-image: url('../../images/steering-wheel.jpg');
+    background-color: $light-blue;
+    width: 60%;
+    height: 100vh;
+  }
+
+  .card-description {
+    width: 40%;
+    padding: 32px;
+  }
+
+  h2 {
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 60px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+}
