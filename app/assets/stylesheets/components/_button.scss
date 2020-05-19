@@ -1,15 +1,22 @@
 .btn-general {
   font-family: "Open Sans";
+  font-weight: lighter;
+  width: 300px;
   letter-spacing: 2px;
   font-size: 24px;
-  color: rgba(204, 204, 204, 1.00);
-  background-color: rgba(35, 49, 66, 1.00);
-  padding: 18px 54px;
+  color: white;
+  background-color: $dark-blue;
+  padding: 16px 56px;
   border-radius: 4px;
-  margin: 10px;
+  margin: 30px auto;
   transition: 0.2s;
-}
 
-.btn-general:hover {
-  box-shadow: 6px 6px rgba(0,0,0,0.2);
+   a {
+    color: white;
+   }
+
+   &:hover {
+      box-shadow: 6px 6px rgba(0,0,0,0.2);
+      text-decoration: none;
+   }
 }
