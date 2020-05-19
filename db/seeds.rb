@@ -9,7 +9,7 @@
 User.create(email: "a@a.com", password: "123456")
 
 
-["Albatross","Barbados","Charterer","D","E"].each do |name|
+["Octopus","Luminosity","Barbara","Sunrays","Secret","Lucky Lady","Paraffin","Olivia","Elysian","Blue Eyes London"].each do |name|
   Yacht.create(name: name, user: User.first)
 end
 
