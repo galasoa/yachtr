@@ -1,12 +1,30 @@
-<h1>Yachtr</h1>
+<div class="navbar-home">
+  <!-- three lines icon -->
+  <!-- ul below to JS? -->
+  <ul>
+    <% if user_signed_in?  %>
+      <li><%= current_user.first_name %></li>
+      <li> <%= link_to "My profile & bookings", pages_profile_path %></li>
+    <% else %>
+      <li><%= link_to 'Sign in', new_user_session_path %></li>
+      <li><%= link_to 'Sign up', new_user_registration_path  %></li>
+    <% end %>
+  </ul>
 
-<ul>
-  <% if user_signed_in?  %>
-    <li><%= current_user.first_name %></li>
-  <% else %>
-    <li><%= link_to 'Sign in', new_user_session_path %></li>
-    <li><%= link_to 'Sign up', new_user_registration_path  %></li>
-  <% end %>
-</ul>
+  <h1>Yachtr</h1>
+
+  <!-- avatar here if signed in - are we asking users to submit photos?-->
+</div>
+
+<div class="hero">
+  <%= image_tag "sailboat.jpg", alt: "sailboat", style: "width: 100vw" %>
+</div>
 
 <%= link_to "See our yachts", yachts_path %>
+
+<div class="cards-selling-points">
+
+</div>
+
+
+
