@@ -1,0 +1,16 @@
+
+<%= image_tag "index_main.jpg" %>
+<div class="container-fluid m-5">
+  <div class="row">
+    <% @yachts.each do |yacht| %>
+      <div class="col-md-6 mb-5">
+        <div class="card" style="width: 18rem;">
+          <%= image_tag "yacht1.png", class: "card-img-top" %>
+          <div class="card-body">
+            <p class="card-text"><%= yacht.name %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
