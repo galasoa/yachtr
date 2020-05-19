@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create(email: "a@a.com", password: "123456")
+
+
+["Albatross","Barbados","Charterer","D","E"].each do |name|
+  Yacht.create(name: name, user: User.first)
+end
+
