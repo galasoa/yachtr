@@ -1,19 +1,26 @@
-<div class="navbar-home">
-  <!-- three lines icon -->
-  <!-- ul below to JS? -->
-  <ul>
-    <% if user_signed_in?  %>
-      <li><%= current_user.first_name %></li>
-      <li> <%= link_to "My profile & bookings", pages_profile_path %></li>
-    <% else %>
-      <li><%= link_to 'Sign in', new_user_session_path %></li>
-      <li><%= link_to 'Sign up', new_user_registration_path  %></li>
-    <% end %>
-  </ul>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-trans">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="d-flex special-class">
+          <ul class="d-flex m-0">
+      <a class="navbar-brand navbar-home" href="#">Yachtr</a>
+          <% if user_signed_in?  %>
+            <li><%= current_user.first_name %></li>
+            <li> <%= link_to "My profile & bookings", pages_profile_path, class: "navbar-brand" %></li>
+          <% else %>
+            <li><%= link_to 'Sign in', new_user_session_path %></li>
+            <li><%= link_to 'Sign up', new_user_registration_path  %></li>
+          <% end %>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
 
-  <h1>Yachtr</h1>
 
-  <!-- avatar here if signed in - are we asking users to submit photos?-->
 </div>
 
 <div class="hero">
