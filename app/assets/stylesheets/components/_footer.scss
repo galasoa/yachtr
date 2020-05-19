@@ -1,0 +1,19 @@
+.footer {
+  background: $light-gray;
+  text-align: center;
+  height: 120px;
+  margin-top: 20px;
+}
+
+.footer-links a {
+  color: black;
+  font-size: 30px;
+  padding: 0px 10px;
+  &:hover {
+    color: $gray;
+  }
+}
+
+.footer-links i {
+  margin-top: 50px;
+}
