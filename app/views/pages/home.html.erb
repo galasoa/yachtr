@@ -1,3 +1,4 @@
+
     <nav class="navbar navbar-expand-lg navbar-light navbar-trans">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -21,25 +22,67 @@
     </nav>
 
 
+
+<div class="navbar-home">
+  <!-- three lines icon -->
+  <!-- ul below to JS? -->
+  <ul>
+    <% if user_signed_in?  %>
+      <li><%= current_user.first_name %></li>
+      <li> <%= link_to "My profile & bookings", pages_profile_path %></li>
+    <% else %>
+      <li><%= link_to 'Sign in', new_user_session_path %></li>
+      <li><%= link_to 'Sign up', new_user_registration_path  %></li>
+    <% end %>
+  </ul>
+
+  <h1>YACHTR</h1>
+
+  <!-- avatar here if signed in - are we asking users to submit photos?-->
+
 </div>
 
 <div class="hero">
   <%= image_tag "sailboat.jpg", alt: "sailboat", style: "width: 100vw" %>
 </div>
 
-<%= link_to "See our yachts", yachts_path %>
+<div class="btn-general">
+  <%= link_to "See our yachts", yachts_path %>
+</div>
 
-<div class="cards-selling-points" style="width: 100vw">
+
+<div class="cards-selling-points">
     <div class="card-img-to-right">
       <div class="card-description">
+        <h2>Escape</h2>
+        <p>Into the immensity of the ocean.</p>
 
       </div>
       <div class="card-img">
-        <%= image_tag "steering-wheel.jpg", alt: "Boat steering wheel" %>
+        <%= image_tag "woman-holding-hair.jpg", alt: "Woman on boat holding hair in the wind" %>
+      </div>
+    </div>
+
+    <div class="card-img-to-left">
+      <div class="card-description">
+        <h2>We provide the crew</h2>
+        <p>So you can focus on the experience.</p>
+
+      </div>
+      <div class="card-img">
+        <%= image_tag "woman-holding-hair.jpg", alt: "Woman on a boat holding her hair in the wind" %>
+      </div>
+    </div>
+
+    <div class="card-img-to-right">
+      <div class="card-description">
+        <h2>Unforgettable moments</h2>
+        <p>In an unbeatable setting</p>
+
+      </div>
+      <div class="card-img">
+        <%= image_tag "ocean-sunset.jpg", alt: "View of the sunset from just above the ocean water" %>
       </div>
     </div>
 
 </div>
-
-
-

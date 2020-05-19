@@ -64,7 +64,7 @@
       <p><strong>Capacity <%= @yacht.capacity %> persons</strong></p>
     </div>
     <div>
-      <a class="btn btn-primary" href="#">Book Now</a>
+      <%= link_to "BOOK NOW", new_yacht_booking_path(@yacht), class: "btn btn-primary" %>
     </div>
   </div>
 
