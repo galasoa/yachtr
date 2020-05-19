@@ -10,11 +10,9 @@ class YachtsController < ApplicationController
   end
 
   def create
-    @yacht = Yacht.new(yacht_params)
+     @yacht = Yacht.new(yacht_params)
     if @yachts.save
-      redirect_to @yacht
-    else
-      render :new
-    end
+      redirect_to yacht_path(@yacht)
   end
+end
 end
