@@ -1,0 +1,50 @@
+<div class="container mb-5">
+  <div class="row justify-content-center mt-5">
+  <div class="col-6">
+
+    <div class="title text-center">
+    <h2>Ahoy there Captain !</h2>
+    <h6>Your yacht will soon be visible to the largest community of sailors</h6>
+    </div>
+
+      <br>
+      <br>
+      <br>
+      <h4>Your Yacht</h4>
+      <br>
+
+     <%= simple_form_for(@yacht) do |f| %>
+     <%= f.error_notification %>
+     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+    <div class="form-inputs">
+      <%= f.input :location %>
+      <%= f.input :name %>
+      <%= f.input :model %>
+      <%= f.input :length%>
+      <%= f.input :capacity %>
+      <%= f.input :price %>
+      <%= f.input :crew %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up", class: "btn-primary" %>
+    </div>
+    <% end %>
+</div>
+</div>
+</div>
+
+<div class="row justify-content-center">
+<div class="footer mb-4 mt-2">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright ">
+  </div>
+</div>
+</div>
