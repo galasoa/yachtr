@@ -1,5 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<% if user_signed_in?  %>
-  <%= current_user.email %>
-<% end %>
+<h1>Yachtr</h1>
+
+<ul>
+  <% if user_signed_in?  %>
+    <li><%= current_user.first_name %></li>
+    <li><%= link_to 'profile', pages_profile_path %></li>
+  <% else %>
+    <li><%= link_to 'Sign in', new_user_session_path %></li>
+    <li><%= link_to 'Sign up', new_user_registration_path  %></li>
+  <% end %>
+</ul>
+
+<%= link_to "See our yachts", yachts_path %>
