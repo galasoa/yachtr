@@ -4,10 +4,11 @@
       </button>
       <div class="d-flex special-class">
           <ul class="d-flex m-0">
-      <a class="navbar-brand navbar-home" href="#">Yachtr</a>
+      <%= link_to "Yachtr", root_path, class: "navbar-brand navbar-home" %>
           <% if user_signed_in?  %>
             <li><%= current_user.first_name %></li>
             <li> <%= link_to "My profile & bookings", pages_profile_path, class: "navbar-brand" %></li>
+            <%= link_to "Yachts to charter", yachts_path, class: "navbar-brand navbar-home" %>
           <% else %>
             <li><%= link_to 'Sign in', new_user_session_path %></li>
             <li><%= link_to 'Sign up', new_user_registration_path  %></li>
