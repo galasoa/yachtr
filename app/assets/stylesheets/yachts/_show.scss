@@ -1,0 +1,27 @@
+$margin_top: 48px;
+
+body {
+  background-color: white;
+}
+h1 {
+  margin: 32px 0;
+  font-weight: bold;
+}
+h2 {
+  font-size: 24px;
+}
+.yacht-about {
+  margin-top: $margin_top;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+.yacht-things-to-know {
+  margin-top: $margin_top;
+}
+ul {
+  padding-left: 0;
+}
+ul li {
+  list-style: none;
+}
