@@ -29,13 +29,15 @@
 
 <div class="container-one">
   <% @yachts.each do |yacht| %>
-    <div class="card-trip">
-       <%= image_tag "yacht1.png"%>
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= yacht.name %></h2>
+    <%= link_to yacht_path(yacht), class: "links" do %>
+      <div class="card-trip">
+          <%= image_tag "yacht1.png"%>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= yacht.name %></h2>
+            </div>
           </div>
-        </div>
       </div>
+    <% end %>
   <% end %>
 </div>
