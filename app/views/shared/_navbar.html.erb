@@ -2,24 +2,24 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <ul class="navbar-links d-flex mb-0">
+        <% if user_signed_in?  %>
+          <li><%= current_user.first_name %></li>
+          <li> <%= link_to "Profile & Bookings", pages_profile_path, class: "navbar-text", class: "navbar-brand mr-3 ml-3" %></li>
+          <%= link_to "Charter", yachts_path, class: "navbar-text", class: "navbar-brand navbar-home mr-3 ml-3" %>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "navbar-text", class: "navbar-brand mr-3 ml-3" %></li>
+        <% else %>
+          <li> <%= link_to "Login", new_user_session_path, class: "navbar-text", class: "navbar-brand mr-3 ml-3" %></li>
+          <li> <%= link_to "Sign up", new_user_registration_path, class: "navbar-text", class: "navbar-brand mr-3 ml-3" %></li>
+        <% end %>
+      </ul>
       <div class="d-flex special-class mt-2 mb-0">
         <div class="logo-navbar ml-3 font-size-16px mt-0 mb-0">
-         <%= link_to "Yachtr", root_path, class: "navbar-brand navbar-home m-0" %>
-       </div>
-          <ul class="d-flex mb-0">
-          <% if user_signed_in?  %>
-            <li><%= current_user.first_name %></li>
-            <li> <%= link_to "Profile & Bookings", pages_profile_path, class: "navbar-brand mr-3 ml-3" %></li>
-            <%= link_to "Charter", yachts_path, class: "navbar-brand navbar-home mr-3 ml-3" %>
-            <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "navbar-brand mr-3 ml-3" %></li>
-          <% else %>
-          <li> <%= link_to "Login", new_user_session_path, class: "navbar-brand mr-3 ml-3" %></li>
-          <li> <%= link_to "Sign up", new_user_registration_path, class: "navbar-brand mr-3 ml-3" %></li>
-          <% end %>
-        </ul>
+         <%= link_to "YACHTR", root_path, id: "logo", class: "navbar-brand navbar-home" %>
+        </div>
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
     </nav>
