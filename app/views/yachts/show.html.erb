@@ -1,3 +1,26 @@
+    <nav class="navbar navbar-expand-lg navbar-light navbar-trans">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="d-flex special-class">
+          <ul class="d-flex m-0">
+      <%= link_to "Yachtr", root_path, class: "navbar-brand navbar-home" %>
+          <% if user_signed_in?  %>
+            <li><%= current_user.first_name %></li>
+            <li> <%= link_to "My profile & bookings", pages_profile_path, class: "navbar-brand" %></li>
+            <%= link_to "Yachts to charter", yachts_path, class: "navbar-brand navbar-home" %>
+          <% else %>
+            <li><%= link_to 'Sign in', new_user_session_path %></li>
+            <li><%= link_to 'Sign up', new_user_registration_path  %></li>
+          <% end %>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
 <div class="container">
   <div class="yachts-head">
     <h1><%= @yacht.name.upcase %></h1>
