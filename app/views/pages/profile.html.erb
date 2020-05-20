@@ -36,16 +36,21 @@
   <div class="profile-bookings">
     <br>
     <h2>Your Bookings</h2>
-    <div class="booking">
-      <div class="info-container">
-        <h3><%= @booking.first.yacht.name %></h3>
-        <p>dates booked</p>
+
+    <% @booking.each do |booking| %>
+      <div class="booking">
+        <div class="info-container">
+          <h3><%= booking.yacht.name.upcase %></h3>
+          <p> <strong>From:</strong> <%= booking.start_date.strftime("%d %B, %Y")  %></p>
+          <p> <strong>Until:</strong> <%= booking.end_date.strftime("%d %B, %Y")  %></p>
+        </div>
+        <div class="btn-container">
+          <a class="btn btn-primary" href="#">Edit booking</a>
+          <a class="btn btn-danger" href="#">Delete booking</a>
+        </div>
       </div>
-      <div class="btn-container">
-        <a class="btn btn-primary" href="#">Edit booking</a>
-        <a class="btn btn-danger" href="#">Delete booking</a>
-      </div>
-    </div>
+    <% end %>
+
   </div>
 
   <div class="profile-yachts">
