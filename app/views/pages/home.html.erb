@@ -1,12 +1,11 @@
 </div>
 
 <div class="hero">
-  <%= image_tag "sailboat.jpg", alt: "sailboat", style: "width: 100vw" %>
+  <div class="btn-general">
+    <%= link_to "See our yachts", yachts_path %>
+  </div>
 </div>
 
-<div class="btn-general">
-  <%= link_to "See our yachts", yachts_path %>
-</div>
 
 
 <div class="cards-selling-points">
@@ -16,7 +15,7 @@
         <p>Into the immensity of the ocean.</p>
       </div>
       <div class="card-img">
-        <!-- background image goes here -->
+        <%= image_tag "ocean-sunset.jpg", alt: "Sunset over the water" %>
       </div>
     </div>
 
@@ -25,20 +24,19 @@
         <%= image_tag "woman-holding-hair.jpg", alt: "Woman on a boat holding her hair in the wind" %>
       </div>
       <div class="card-description">
-        <h2>Focus on the experience</h2>
-        <p>We provide the crew.</p>
-
+        <h2>Unforgettable moments</h2>
+        <p>Good times in an unbeatable setting.</p>
       </div>
     </div>
 
 <div class="cards-selling-points" style="width: 100vw">
     <div class="card-img-to-right">
       <div class="card-description">
-
+        <h2>Focus on the experience</h2>
+        <p>We provide the crew.</p>
       </div>
       <div class="card-img">
         <%= image_tag "steering-wheel.jpg", alt: "Boat steering wheel" %>
       </div>
     </div>
-<!-- extra cards here  -->
 </div>

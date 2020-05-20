@@ -15,6 +15,13 @@
 // Partials for yachts
 @import "yachts/index";
 
+// Partials for bookings
+@import "bookings/index";
+
 body {
   background: white;
+}
+
+html {
+  scroll-behavior: smooth;
 }
