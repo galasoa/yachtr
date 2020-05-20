@@ -59,7 +59,12 @@
   <div class="yacht-about">
     <div>
       <h2>About <%= @yacht.name.upcase %></h2>
-      <p><strong>Capacity <%= @yacht.capacity %> persons</strong></p>
+      <ul>
+        <li><strong>Capacity:</strong> <%= @yacht.capacity %> persons</li>
+        <li><strong>Price per day:</strong> £<%= @yacht.price %></li>
+        <li><strong>Location:</strong> <%= @yacht.location %></li>
+        <li><strong>Crew:</strong> <%=  @yacht.crew.nil? ? "No crew available" : "Crew available on request" %></li>
+      </ul>
     </div>
     <div>
       <%= link_to "BOOK NOW", new_yacht_booking_path(@yacht), class: "btn btn-primary" %>
