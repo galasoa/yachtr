@@ -13,3 +13,8 @@ img {
   width: 60%;
 
 }
+
+.min-hight {
+  min-height: calc(100vh - 160px);
+  padding-bottom: 20px;
+}
