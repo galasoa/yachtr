@@ -10,6 +10,12 @@
       <%= f.error_notification %>
 
       <div class="form-inputs">
+        <%= f.input :first_name,
+                required: false,
+                input_html: { autocomplete: "first name" } %>
+        <%= f.input :last_name,
+                required: false,
+                input_html: { autocomplete: "last name" } %>
         <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -21,7 +27,6 @@
         <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-
       </div>
 
        <div class="form-actions">
@@ -30,6 +35,7 @@
        <% end %>
        <br>
        <%= render "devise/shared/links" %>
+        <br>
      </div>
    </div>
  </div>

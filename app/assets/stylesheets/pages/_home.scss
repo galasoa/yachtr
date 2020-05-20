@@ -11,3 +11,8 @@
   align-items: center;
 
 }
+
+.min-hight {
+  min-height: calc(100vh - 160px);
+  padding-bottom: 20px;
+}
