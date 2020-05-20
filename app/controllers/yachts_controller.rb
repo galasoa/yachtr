@@ -1,6 +1,10 @@
 class YachtsController < ApplicationController
   def index
-    @yachts = Yacht.all
+    unless params[:search]
+      @yachts = Yacht.all
+    else
+      @yachts = Yacht.where(location: params[:search])
+    end
   end
 
   def show
