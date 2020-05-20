@@ -12,12 +12,12 @@
 </div> -->
 
 
-<form action="/yachts" class="form-inline my-2 my-lg-0 d-flex flex-column">
+<form id="scroll-container" action="/yachts" class="form-inline my-2 my-lg-0 d-flex flex-column">
  <input name="search" id="margindiv" class="form-control mr-sm-2" type="search" placeholder="Search by location" aria-label="Search">
  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 </form>
 
-<div class="container-one" id="scroll-container">
+<div class="container-one">
   <% @yachts.each do |yacht| %>
     <%= link_to yacht_path(yacht), class: "links" do %>
       <div class="card-trip">
