@@ -6,6 +6,13 @@
           <div class="card-trip-infos">
             <div>
               <h2 class="color1"><%= yacht.name %></h2>
+              <p class="color1">Located in <%= yacht.location %></p>
+              <% if yacht.crew == true %>
+              <p class="color1"><%= "Crew included" %></p>
+              <% end %>
+             <!--  <p class="color1">Crew <%=  yacht.crew %></p> -->
+              <p class="color1">£<%=  yacht.price %> per day</p>
+              <p class="color1">Capacity of <%= yacht.capacity %></p>
             </div>
           </div>
       </div>
