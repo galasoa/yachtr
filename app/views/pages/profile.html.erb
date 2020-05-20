@@ -10,20 +10,24 @@
       <img class="avatar-large" src="https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1415&q=80" alt="profile picture">
     </div>
   </div>
-
   <div class="profile-bookings">
     <br>
     <h2>Your Bookings</h2>
-    <div class="booking">
-      <div class="info-container">
-        <h3>yacht name</h3>
-        <p>dates booked</p>
+
+    <% @booking.each do |booking| %>
+      <div class="booking">
+        <div class="info-container">
+          <h3><%= booking.yacht.name.upcase %></h3>
+          <p> <strong>From:</strong> <%= booking.start_date.strftime("%d %B, %Y")  %></p>
+          <p> <strong>Until:</strong> <%= booking.end_date.strftime("%d %B, %Y")  %></p>
+        </div>
+        <div class="btn-container">
+          <a class="btn btn-primary" href="#">Edit booking</a>
+          <a class="btn btn-danger" href="#">Delete booking</a>
+        </div>
       </div>
-      <div class="btn-container">
-        <a class="btn btn-primary" href="#">Edit booking</a>
-        <a class="btn btn-danger" href="#">Delete booking</a>
-      </div>
-    </div>
+    <% end %>
+
   </div>
 
   <div class="profile-yachts">
