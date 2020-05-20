@@ -12,7 +12,7 @@ User.destroy_all
 locations = ["London","Barbados","Monaco","Cote d'Azur","Marrakesh","Saint Tropez","Sardinia","Tuscany","Florence","Naples"]
 crews = [true,false,true,false,true,false,true,false,true,false]
 capacities = [23,45,65,34,56,98,67,87,69,67]
-prices = [33333,33333,44444,55555,66666,77777,88888,99999,87878]
+prices = [33333,33333,44444,55555,66666,77777,88888,99999,87878, 98989]
 User.create(email: "a@a.com", password: "123456")
 
 
