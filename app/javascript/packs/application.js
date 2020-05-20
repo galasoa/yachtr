@@ -31,4 +31,19 @@ import "bootstrap";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  const startDate = document.querySelector("#booking_start_date_3i");
+  const endDate = document.querySelector("#booking_end_date_3i");
+  const pricePerDay = document.querySelector("#price-per-day");
+
+ if (startDate) {
+  const price = Number.parseInt(pricePerDay.innerText, 10)
+  const updatePrice = event => {
+    const totalDays = endDate.value - startDate.value;
+    pricePerDay.innerText = price * totalDays;
+  }
+
+  startDate.addEventListener("change", updatePrice)
+  endDate.addEventListener("change", updatePrice)
+ }
+
 });

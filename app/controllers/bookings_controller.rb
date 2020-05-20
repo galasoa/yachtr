@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.yacht = @yacht
     if @booking.save
-      redirect_to yachts_path
+      redirect_to pages_profile_path
     else
       render :new
     end

@@ -1,16 +1,14 @@
-
-// Specific CSS for your home-page
 .special-class{
   width: 100vw;
   justify-content: space-between;
 }
 
-.cards-selling-points {
-  width: 100vw;
-}
-
-img {
-  width: 60%;
+.hero {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(246, 250, 252, 0.09), #0062cc40), url("/assets/sailboat.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
 
 }
 

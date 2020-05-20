@@ -5,4 +5,6 @@
     <%= f.input :end_date %>
     <%= f.submit "BOOK", class: "btn btn-primary" %>
   <% end %>
+  <p> <strong>Total Price: </strong> £<span id="price-per-day"><%= @yacht.price %></span></p>
+
 </div>
