@@ -3,7 +3,7 @@ class YachtsController < ApplicationController
     unless params[:search]
       @yachts = Yacht.all
     else
-      @yachts = Yacht.where(location: params[:search])
+      @yachts = Yacht.where("location ILIKE ?", params[:search])
     end
   end
 
