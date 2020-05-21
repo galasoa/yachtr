@@ -16,6 +16,17 @@ class BookingsController < ApplicationController
     end
   end
 
+  def edit
+     @yacht = Yacht.find(params[:yacht_id])
+     @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
+    redirect_to pages_profile_path
+  end
+
   private
 
     def booking_params
