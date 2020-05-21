@@ -3,8 +3,21 @@
   justify-content: space-between;
 }
 
-.homepagebackgroundimage{
-  background-image: linear-gradient(to bottom, rgba(246, 250, 252, 0.09), #0062cc40), url("/assets/sailboat.jpg");
+// .homepagebackgroundimage{
+//   // position: absolute;
+// //   background-image: linear-gradient(to bottom, rgba(246, 250, 252, 0.09), #0062cc40), url("/assets/sailboat.jpg");
+// }
+
+.home-video{
+  top: 0;
+  width: 100vw;
+ height: 100vh;
+ position: absolute;
+ // display: flex;
+ justify-content: center;
+ object-fit: cover;
+ top: 0;
+ z-index: -2;
 }
 
 .centr{
@@ -13,8 +26,9 @@ text-align: center;
 
 
 .inner2{
+  position: relative;
   padding: 60px;
-  border: 2px solid white;
+  // border: 2px solid white;
   color: white;
   height: 100%;
 }
@@ -32,6 +46,16 @@ font-size: 100px;
 font-size: 50px;
 }
 
+.home_video {
+ width: 100vw;
+ // height: 100vh;
+ // position: absolute;
+ // display: flex;
+ // justify-content: center;
+ // object-fit: cover;
+ // top: 0;
+ // z-index: -2;
+}
 
 // .overlay {
 // background-size: cover;
