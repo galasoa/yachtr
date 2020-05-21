@@ -1,14 +1,16 @@
+.footer-background{
+  background-color: #fafafa;
+}
 .footer-payment{
   color: $light-blue;
   text-align: center;
   font-size: 22px;
   letter-spacing: 5px;
   margin-top: 1px;
-  // margin-bottom: 5px;
 }
 
 .footer-bookings {
-  background: #ffffff;
+  background: #fafafa;
   text-align: center;
   height: 95px;
 }
@@ -16,8 +18,6 @@
 .payment-design{
   .fab{
     color: $light-blue;
-     &:hover {
-    color: $gray;
+    background-color: #fafafa
   }
-}
 }
