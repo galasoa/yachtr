@@ -8,7 +8,7 @@
   <br>
   <%= f.submit "BOOK", class: "btn btn-primary" %>
   <% end %>
-  <p> <strong>Total Price: </strong> £<span id="price-per-day"><%= @yacht.price %></span></p>
+  <p> <strong>Total Price: </strong> £<span id="price-per-day"><%= number_with_delimiter(@yacht.price) %></span></p>
 </div>
 <br>
 <br>
