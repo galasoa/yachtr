@@ -1,27 +1,29 @@
-<%= video_tag "Splash.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home-video" %>
+<div class="topofhome">
+  <div class="overlay homepagebackgroundimage">
+    <div class="inner2 centr d-flex flex-column justify-content-between">
+      <h1 class="colormaster"><strong>Yachtr</strong></h1>
+      <div class="btn-general">
+      <%= link_to "See our yachts", yachts_path %>
+      </div>
+      <p>Discover the difference <a href="#my-scroll"><i id="down" class="fas fa-arrow-circle-down"></i></a></p>
 <%= audio_tag("electrochill.mp3", loop: :loop, controls: true, id: "myAudio") %>
+    </div>
+  </div>
+  <%= video_tag "Splash.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home-video" %>
+</div>
+
 
 <!-- <div class="targetaudio">
 <i class="fas fa-volume-mute"></i>
 </div> -->
 <!-- Please don't delete these lines above we may be able to get autoplay working 🤣 -->
 
-<div class="overlay homepagebackgroundimage">
-  <div class="inner2 centr d-flex flex-column justify-content-between">
-    <h1 class="colormaster"><strong>Yachtr</strong></h1>
-    <div class="btn-general">
-    <%= link_to "See our yachts", yachts_path %>
-    </div>
-    <p>Discover the difference <a href="#my-scroll"><i id="down" class="fas fa-arrow-circle-down"></i></a></p>
-  </div>
-</div>
-
 
 <div id="my-scroll" class="cards-selling-points">
     <div class="card-img-to-right">
       <div class="card-description">
-        <h2>Escape</h2>
-        <p>Into the immensity of the ocean.</p>
+        <h2 class="sub-header">Escape</h2>
+        <p>Into the immensity of the ocean. From the global fleet of yachts offered for hire, we hand-pick the best opportunities and share our expert knowledge, so that you can make the best decisions.</p>
       </div>
       <div class="card-img">
         <%= image_tag "ocean-sunset.jpg", alt: "Sunset over the water" %>
@@ -33,16 +35,16 @@
         <%= image_tag "woman-holding-hair.jpg", alt: "Woman on a boat holding her hair in the wind" %>
       </div>
       <div class="card-description">
-        <h2>Unforgettable moments</h2>
-        <p>Good times in an unbeatable setting.</p>
+        <h2 class="sub-header">Unforgettable moments</h2>
+        <p>Good times in an unbeatable setting. Cruise in inimitable style and experience real freedom. The adventure of a lifetime awaits aboard the world’s greatest superyachts, all curated by your own professional broker.</p>
       </div>
     </div>
 
 <div class="cards-selling-points" style="width: 100vw">
     <div class="card-img-to-right">
       <div class="card-description">
-        <h2>Focus on the experience</h2>
-        <p>We provide the crew.</p>
+        <h2 class="sub-header">Focus on the experience</h2>
+        <p>We provide the crew. From first concept to maiden voyage and beyond, we work on your behalf so you can enjoy building your dream. Together we bring your unique vision to life.</p>
       </div>
       <div class="card-img">
         <%= image_tag "steering-wheel.jpg", alt: "Boat steering wheel" %>

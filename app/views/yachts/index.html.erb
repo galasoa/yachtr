@@ -18,12 +18,16 @@
 </form>
 </div>
 
-<div class="container-cards-and-map">
+<div class="container-cards-and-map" style="display: flex; justify-content: space-between;">
   <div class="container-one">
     <% @yachts.each do |yacht| %>
       <%= link_to yacht_path(yacht), class: "links" do %>
         <div class="card-trip">
-            <%= cl_image_tag yacht.photos.first.key,crop: :scale, :class=>"fit"%>
+            <% if yacht.photos.attached? %>
+              <%= cl_image_tag yacht.photos.first.key,crop: :scale, :class=>"fit"%>
+            <% else %>
+              <%= image_tag "upload.jpg" %>
+            <% end %>
             <div class="card-trip-infos">
               <div>
                 <h2 class="color1"><%= yacht.name %></h2>
@@ -41,7 +45,7 @@
     <% end %>
   </div>
   <div id="map"
-       style="width: 50%; height: 98vh;"
+       style="max-width: 50vw; height: 98vh;"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>

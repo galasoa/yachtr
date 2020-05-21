@@ -4,9 +4,8 @@ Rails.application.routes.draw do
   get 'pages/profile', to: "pages#profile"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :yachts do
-    resources :bookings, only: [ :new, :create ]
+    resources :bookings, only: [ :new, :create, :edit, :update ]
+    resources :reviews, only: [ :new, :create ]
   end
-
   resources :bookings, only: [ :destroy ]
-
 end

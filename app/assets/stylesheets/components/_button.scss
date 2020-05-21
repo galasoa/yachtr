@@ -30,7 +30,7 @@
   width: 150px;
   letter-spacing: 2px;
   font-size: 16px;
-  color: white;
+  color: white !important;
   background-color: $light-blue;
   padding: 8px 24px;
   border-radius: 4px;
@@ -75,4 +75,7 @@
       box-shadow: 6px 6px rgba(0,0,0,0.2);
       text-decoration: none;
    }
+}
+.margin-none {
+  margin: 0;
 }
