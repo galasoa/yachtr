@@ -13,10 +13,15 @@
 //   width: 100px;
 // }
 
+.topofhome {
+  height: calc(100vh - 74px);
+  position: relative;
+}
+
 .home-video{
   top: 0;
   width: 100vw;
- height: 100vh;
+ height: 100%;
  position: absolute;
  // display: flex;
  justify-content: center;
@@ -33,7 +38,7 @@ text-align: center;
 .inner2{
   position: relative;
   padding: 60px;
-  // border: 2px solid white;
+  border: 2px solid white;
   color: white;
   height: 100%;
 }
