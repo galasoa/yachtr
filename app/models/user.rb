@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :yachts
   has_many :yachts, through: :bookings
+  has_one_attached :photo
 end
