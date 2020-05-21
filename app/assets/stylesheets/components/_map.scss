@@ -1,12 +1,7 @@
-.container-cards-and-map {
- display: flex;
- justify-content: space-between;
-}
-
 #map {
   position: sticky;
+  height: 98vh;
   top: 8px;
   padding: 16px;
   margin: 10px 10px 0 10px;
-
 }
