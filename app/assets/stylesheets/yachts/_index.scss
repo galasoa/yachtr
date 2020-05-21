@@ -84,15 +84,16 @@ box-sizing: border-box;
 }
 
 .backgroundimage{
-  background-image: linear-gradient(to bottom, rgba(246, 250, 252, 0.09), #0062cc40), url("/assets/index_main.jpg");
+  background-image: url("/assets/index_main.jpg");
+  // linear-gradient(to bottom, rgba(246, 250, 252, 0.09), #0062cc40),
 }
 
 
 .inner{
   padding: 100px;
-  // border: 2px solid white;
+  border: 2px solid white;
   color: white;
-  height: 50%;
+  height: 100%;
   z-index: 4;
 }
 

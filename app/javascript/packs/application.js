@@ -51,3 +51,24 @@ document.addEventListener('turbolinks:load', () => {
  }
 
 });
+
+// noble attempt at autoplay, will keep trying
+// const button = document.querySelector(".targetaudio");
+// button.addEventListener('click', () => {
+//   let audio = document.getElementById("myAudio")
+//   if (audio.muted == false) {
+//     audio.muted = true
+//     audio.play()
+//     console.log(audio)
+//     console.log('playing')
+//     button.innerHTML = `<i class="fas fa-volume-mute"></i>`
+//   } else {
+//     audio.muted = false
+//     audio.pause()
+//       console.log(audio)
+//       console.log('paused')
+//     button.innerHTML = `<i class="fas fa-volume-up"></i>`
+//   }
+// });
+
+
