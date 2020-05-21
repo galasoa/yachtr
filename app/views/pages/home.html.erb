@@ -1,20 +1,22 @@
-<%= video_tag "Splash.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home-video" %>
+<div class="topofhome">
+  <div class="overlay homepagebackgroundimage">
+    <div class="inner2 centr d-flex flex-column justify-content-between">
+      <h1 class="colormaster"><strong>Yachtr</strong></h1>
+      <div class="btn-general">
+      <%= link_to "See our yachts", yachts_path %>
+      </div>
+      <p>Discover the difference <a href="#my-scroll"><i id="down" class="fas fa-arrow-circle-down"></i></a></p>
 <%= audio_tag("electrochill.mp3", loop: :loop, controls: true, id: "myAudio") %>
+    </div>
+  </div>
+  <%= video_tag "Splash.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home-video" %>
+</div>
+
 
 <!-- <div class="targetaudio">
 <i class="fas fa-volume-mute"></i>
 </div> -->
 <!-- Please don't delete these lines above we may be able to get autoplay working 🤣 -->
-
-<div class="overlay homepagebackgroundimage">
-  <div class="inner2 centr d-flex flex-column justify-content-between">
-    <h1 class="colormaster"><strong>Yachtr</strong></h1>
-    <div class="btn-general">
-    <%= link_to "See our yachts", yachts_path %>
-    </div>
-    <p>Discover the difference <a href="#my-scroll"><i id="down" class="fas fa-arrow-circle-down"></i></a></p>
-  </div>
-</div>
 
 
 <div id="my-scroll" class="cards-selling-points">
