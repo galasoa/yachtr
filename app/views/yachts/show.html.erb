@@ -74,6 +74,16 @@
       </li>
     </ul>
   </div>
+
+  <div class="reviews">
+    <h2>Reviews</h2>
+    <ul>
+      <% @yacht.reviews.each do |review| %>
+        <li><%= review.content %></li>
+      <% end %>
+    </ul>
+    <%= link_to "Leave a review", new_yacht_review_path(@yacht) %>
+  </div>
 </div>
 
 <%= render 'shared/footer-payment' %>
