@@ -23,7 +23,7 @@
     <% @yachts.each do |yacht| %>
       <%= link_to yacht_path(yacht), class: "links" do %>
         <div class="card-trip">
-            <%= image_tag "yacht1.png"%>
+            <%= cl_image_tag yacht.photos.first.key,crop: :scale, :class=>"fit"%>
             <div class="card-trip-infos">
               <div>
                 <h2 class="color1"><%= yacht.name %></h2>
@@ -41,7 +41,7 @@
     <% end %>
   </div>
   <div id="map"
-       style="width: 100%; height: 98vh;"
+       style="width: 50%; height: 98vh;"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
