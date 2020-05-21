@@ -37,5 +37,5 @@ end
 private
 
 def yacht_params
-  params.require(:yacht).permit(:location, :name, :model, :length, :capacity, :crew, :price, :photo)
+  params.require(:yacht).permit(:location, :name, :model, :length, :capacity, :crew, :price, :photo, photos: [])
 end
