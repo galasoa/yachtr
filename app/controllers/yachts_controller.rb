@@ -1,10 +1,18 @@
 class YachtsController < ApplicationController
   def index
     unless params[:search]
-      @yachts = Yacht.all
+      @yachts = Yacht.geocoded
     else
-      @yachts = Yacht.where("location ILIKE ?", params[:search])
+      @yachts = Yacht.geocoded.where("location ILIKE ?", params[:search])
     end
+
+    @markers = @yachts.map do |yacht|
+      {
+        lat: yacht.latitude,
+        lng: yacht.longitude
+      }
+    end
+
   end
 
   def show
