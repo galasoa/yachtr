@@ -10,12 +10,11 @@
         </div>
       <% end %>
     </div>
-
     <div class="profile-info">
       <h1>Profile</h1>
       <%= link_to "Edit Profile", edit_user_registration_path %>
       <ul>
-        <li><i class="fas fa-user"></i> <%= current_user.first_name%></li>
+        <li><i class="fas fa-user"></i> <%= current_user.first_name%> <%= current_user.last_name%></li>
         <li><i class="far fa-envelope"></i> <%= current_user.email %></li>
       </ul>
 
