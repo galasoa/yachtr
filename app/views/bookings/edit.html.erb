@@ -1,0 +1,15 @@
+<br>
+<div class="container">
+  <h1>Edit Booking</h1>
+  <br>
+  <%= simple_form_for [ @yacht, @booking ] do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+  <br>
+  <%= f.submit "BOOK", class: "btn btn-primary" %>
+  <% end %>
+  <p> <strong>Total Price: </strong> £<span id="price-per-day"><%= @yacht.price %></span></p>
+</div>
+<br>
+<br>
+<%= render 'shared/footer-payment' %>
