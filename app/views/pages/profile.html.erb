@@ -1,48 +1,90 @@
 <div class="container">
-  <div class="profile-info">
+  <div class="profile">
     <div>
+      <%= image_tag "https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1415&q=80", class: "avatar-square-large", alt: "avatar" %>
+    </div>
+
+    <div class="profile-info">
       <h1>Profile</h1>
-      <p><%= link_to "Edit Profile", edit_user_registration_path %></p>
-      <p><i class="fas fa-user"></i> <%= current_user.first_name%></p>
-      <p><i class="far fa-envelope"></i> <%= current_user.email %></p>
-    </div>
-    <div>
-      <img class="avatar-large" src="https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1415&q=80" alt="profile picture">
-    </div>
-  </div>
-  <div class="profile-bookings">
-    <br>
-    <h2>Your Bookings</h2>
+      <%= link_to "Edit Profile", edit_user_registration_path %>
+      <ul>
+        <li><i class="fas fa-user"></i> <%= current_user.first_name%></li>
+        <li><i class="far fa-envelope"></i> <%= current_user.email %></li>
+      </ul>
 
-    <% @booking.each do |booking| %>
-      <div class="booking">
-        <div class="info-container">
-          <h3><%= booking.yacht.name.upcase %></h3>
-          <p> <strong>From:</strong> <%= booking.start_date.strftime("%d %B, %Y")  %></p>
-          <p> <strong>Until:</strong> <%= booking.end_date.strftime("%d %B, %Y")  %></p>
-        </div>
-        <div class="btn-container">
-          <a class="btn btn-primary" href="#">Edit booking</a>
-          <a class="btn btn-danger" href="#">Delete booking</a>
-        </div>
-      </div>
-    <% end %>
-
-  </div>
-
-  <div class="profile-yachts">
-    <br>
-    <h2>Your Yachts</h2>
-    <div class="booking">
-      <div class="info-container">
-        <h3>yacht name</h3>
-      </div>
-      <div class="btn-container">
-        <a class="btn btn-primary" href="#">Edit yacht</a>
-        <a class="btn btn-danger" href="#">Delete yacht</a>
-      </div>
+      <%= link_to "Add Yacht", new_yacht_path, class: "btn-small" %>
     </div>
   </div>
-  <br>
-  <%= link_to "Back", root_path, class: "btn btn-primary" %>
+
+  <div class="booking-yachts-container row">
+    <div class="profile-bookings col-6">
+      <h2 class="sub-header">Your Bookings</h2>
+
+
+      <% if @booking.empty? %>
+        <%= link_to(yachts_path, class: "card-product book-now-container") do %>
+            <img src="https://images.unsplash.com/photo-1498994292978-4d6ff757c6dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=917&q=80" />
+            <div class="card-product-book-now">
+                <h3>Book Now!</h3>
+                <p>Cruise in inimitable style and experience real freedom. The adventure of a lifetime awaits aboard the world’s greatest superyachts.</p>
+            </div>
+        <% end %>
+      <% else %>
+        <% @booking.each do |booking| %>
+          <div class="booking">
+          <div class="card-product">
+            <img src="https://images.unsplash.com/photo-1498994292978-4d6ff757c6dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=917&q=80" />
+            <div class="card-product-infos">
+                <h3><%= booking.yacht.name.upcase %></h3>
+                <ul>
+                  <li> <strong>From:</strong> <%= booking.start_date.strftime("%d %B, %Y")  %></li>
+                  <li> <strong>Until:</strong> <%= booking.end_date.strftime("%d %B, %Y")  %></li>
+                  <li> <strong>Location:</strong> <%= booking.yacht.location %></li>
+                </ul>
+            </div>
+            <div class="buttons d-flex flex-column">
+              <%= link_to "Edit", new_yacht_path, class: "btn-edit" %>
+              <%= link_to "Cancel", new_yacht_path, class: "btn-delete" %>
+            </div>
+          </div>
+          </div>
+        <% end %>
+      <% end %>
+
+    </div>
+
+    <div class="profile-yachts col-6">
+      <h2 class="sub-header">Your Yachts</h2>
+
+      <% if @yacht.empty? %>
+        <%= link_to(new_yacht_path, class: "card-product book-now-container") do %>
+            <img src="https://images.unsplash.com/photo-1585599963711-92dabef24934?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2300&q=80" />
+            <div class="card-product-book-now">
+                <h3>Rent out your yacht now!</h3>
+                <p>Our market-leading intelligence paired with our unrivalled client database guarantees the smoothest of rentals. Every time.</p>
+            </div>
+        <% end %>
+      <% else %>
+        <% @yacht.each do |yacht| %>
+          <div class="booking">
+          <div class="card-product">
+            <img src="https://images.unsplash.com/photo-1498994292978-4d6ff757c6dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=917&q=80" />
+            <div class="card-product-infos">
+                <h3><%= yacht.name.upcase %></h3>
+                <ul>
+                  <li> <strong>location:</strong> <%= yacht.location %></li>
+                  <li><strong> Capacity:</strong> <%= yacht.capacity %></li>
+                  <li><strong> Price per day:</strong> £<%= yacht.price %></li>
+                </ul>
+            </div>
+            <div class="buttons d-flex flex-column">
+              <%= link_to "Edit", new_yacht_path, class: "btn-edit" %>
+              <%= link_to "Cancel", new_yacht_path, class: "btn-delete" %>
+            </div>
+          </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>

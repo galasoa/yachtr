@@ -1,26 +1,36 @@
 .container {
   padding: 50px 0;
 }
-.profile-info {
+.profile {
   display: flex;
-  justify-content: space-between;
   border-bottom: 1px solid black;
-}
-.booking {
-  display: flex;
-  justify-content: space-between;
-  padding: 16px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-  border-radius: 8px;
-  margin-bottom: 40px;
-  p {
-    margin-bottom: 4px;
-  }
-  h3 {
-    color: $light-blue;
+  h1 {
+    color: black;
   }
 }
-.profile-bookings h2,
-.profile-yachts h2{
-  margin: 16px 0;
+.profile-info {
+  h1 {
+    margin: 0;
+  }
+  ul li {
+    margin-top: 8px;
+  }
+  a:first-of-type {
+    color: black;
+    text-decoration: none;
+    &:hover {
+      color: $light-blue;
+    }
+  }
+}
+.booking-yachts-container {
+  padding: 80px 0;
+}
+.buttons {
+  padding-right: 16px;
+}
+.profile-bookings a,
+.profile-yachts .book-now-container {
+  text-decoration: none;
+  color: black;
 }

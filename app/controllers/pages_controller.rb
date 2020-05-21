@@ -5,5 +5,6 @@ class PagesController < ApplicationController
 
   def profile
     @booking = Booking.where(user_id: current_user)
+    @yacht = Yacht.where(user_id: current_user)
   end
 end

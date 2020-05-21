@@ -1,0 +1,12 @@
+.sub-header {
+  color: black;
+  font-weight: 600;
+  margin-bottom: 40px;
+  &:after {
+      content: "";
+      display: block;
+      width: 80px;
+      padding-top: 8px;
+      border-bottom: 8px solid $light-blue;
+  }
+}
