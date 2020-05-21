@@ -1,12 +1,13 @@
 .footer {
-  background: #f6f6f6;
+  background: #ffffff;
   text-align: center;
   height: 120px;
 }
 
 .footer-links a {
+  letter-spacing: 6px;
   color: $dark-blue;
-  font-size: 30px;
+  font-size: 24px;
   padding: 0px 10px;
   &:hover {
     color: $gray;
