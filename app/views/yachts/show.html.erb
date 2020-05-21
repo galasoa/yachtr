@@ -2,7 +2,7 @@
   <div class="yachts-head">
     <h1><%= @yacht.name.upcase %></h1>
     <div>
-      <%= link_to "Back", yachts_path, class: "btn btn-primary" %>
+      <%= link_to "Back", yachts_path, class: "btn-small margin-none" %>
     </div>
   </div>
 
@@ -38,7 +38,7 @@
 
   <div class="yacht-about">
     <div>
-      <h2>About <%= @yacht.name.upcase %></h2>
+      <h2 class="sub-header">About <%= @yacht.name.upcase %></h2>
       <ul>
         <li><strong>Capacity:</strong> <%= @yacht.capacity %> persons</li>
         <li><strong>Price per day:</strong> £<%= @yacht.price %></li>
@@ -47,12 +47,12 @@
       </ul>
     </div>
     <div>
-      <%= link_to "BOOK NOW", new_yacht_booking_path(@yacht), class: "btn btn-primary" %>
+      <%= link_to "BOOK NOW", new_yacht_booking_path(@yacht), class: "btn-general" %>
     </div>
   </div>
 
   <div class="yacht-things-to-know">
-    <h2>Things to know</h2>
+    <h2 class="sub-header">Things to know</h2>
     <ul>
       <li>
         Check-in: After 14:00
@@ -64,7 +64,7 @@
   </div>
 
   <div class="yacht-cancellation">
-    <h2>Cancellation Policy</h2>
+    <h2 class="sub-header">Cancellation Policy</h2>
     <ul>
       <li>
         Free cancellation for 48 hours
