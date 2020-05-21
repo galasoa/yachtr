@@ -41,7 +41,7 @@
       <h2 class="sub-header">About <%= @yacht.name.upcase %></h2>
       <ul>
         <li><strong>Capacity:</strong> <%= @yacht.capacity %> persons</li>
-        <li><strong>Price per day:</strong> £<%= @yacht.price %></li>
+        <li><strong>Price per day:</strong> £<span id="price-per-day"><%= number_with_delimiter(@yacht.price)%></span></li>
         <li><strong>Location:</strong> <%= @yacht.location %></li>
         <li><strong>Crew:</strong> <%=  @yacht.crew.nil? ? "No crew available" : "Crew available" %></li>
       </ul>
@@ -83,6 +83,15 @@
       <% end %>
     </ul>
     <%= link_to "Leave a review", new_yacht_review_path(@yacht) %>
+
+      <div class="review-stars">
+      <% @yacht.average_stars.times do |time| %>
+        <i class="fas fa-star"></i>
+      <% end %>
+      <% (5 - @yacht.average_stars).times do |time| %>
+        <i class="far fa-star"></i>
+      <% end %>
+    </div>
   </div>
 </div>
 
