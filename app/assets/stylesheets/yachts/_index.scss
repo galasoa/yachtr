@@ -98,7 +98,7 @@ box-sizing: border-box;
 }
 
 .inner h1 {
-font-size: 200px;
+font-size: 160px;
 }
 
 
@@ -130,5 +130,17 @@ background-color: rgba(0,0,0,0.01);
 }
 
 #margindiv{
-margin-bottom: 10px;
+margin-bottom: 25px;
+margin-top: 25px;
+box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.btn-outline-success{
+box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.search-design{
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
