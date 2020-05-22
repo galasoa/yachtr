@@ -10,7 +10,7 @@ Booking.destroy_all
 Yacht.destroy_all
 User.destroy_all
 
-locations = ["London","Barbados","Monaco","Cote d'Azur","Marrakesh","Saint Tropez","Sardinia","Tuscany","Florence","Naples"]
+locations = ["Brighton","Barbados","Monaco","Cote d'Azur","Miami","Saint Tropez","Varadero","Marseille","Olbia","Naples"]
 crews = [true,false,true,false,true,false,true,false,true,false]
 capacities = [23,45,65,34,56,98,67,87,69,67]
 prices = [1000000,500000,400000,1500000,30000,48000,380000,900000,870000, 230000]
