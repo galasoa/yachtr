@@ -30,7 +30,7 @@
 
 
       <% if @booking.empty? %>
-        <%= link_to(yachts_path, class: "card-product book-now-container") do %>
+        <%= link_to(yachts_path, class: "card-product") do %>
             <img src="https://images.unsplash.com/photo-1498994292978-4d6ff757c6dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=917&q=80" />
             <div class="card-product-book-now">
                 <h3>Book Now!</h3>
@@ -56,6 +56,7 @@
                 </ul>
             </div>
             <div class="buttons d-flex flex-column">
+              <%= link_to "Booking", yacht_path(booking.yacht), class: "btn-booking"%>
               <%= link_to "Edit", edit_yacht_booking_path(booking.yacht, booking), class: "btn-edit" %>
               <%= link_to "Cancel", new_yacht_path, class: "btn-delete"%>
             </div>
