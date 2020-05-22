@@ -4,9 +4,10 @@
 
 .card-trip {
   overflow: hidden;
+  margin-top: 10px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 10px;
+  margin-bottom: 20px;
   &:hover {
     border: 1px solid #E6E6E6;
     box-shadow: 6px 6px rgba(0,0,0,0.2);
@@ -14,7 +15,7 @@
 }
 
 .card-trip > img {
-  height: 400px;
+  height: 600px;
   width: 100%;
   object-fit: cover;
 }
@@ -55,8 +56,6 @@
 }
 
 .container-one {
-  display: flex;
-  width: 50%;
   flex-wrap: wrap;
   max-width: 1500px;
   margin-left: auto;
