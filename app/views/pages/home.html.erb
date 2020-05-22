@@ -57,3 +57,18 @@
     <%= link_to "See our yachts", yachts_path %>
   </div>
 </div>
+
+
+<div class="alert alert-success">
+<% if user_signed_in? %>
+ <strong>Ahoy Captain!</strong> Signed in successfully.
+   <a data-dismiss="alert" aria-label="Close">
+    <i class="fas fa-times"></i>
+    <% else %>
+    <strong>Ahoy!</strong> Signed out successfully.
+   <a data-dismiss="alert" aria-label="Close">
+    <i class="fas fa-times"></i>
+    <% end %>
+  </div>
+
+
