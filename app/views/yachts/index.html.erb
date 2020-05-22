@@ -24,7 +24,7 @@
       <%= link_to yacht_path(yacht), class: "links" do %>
         <div class="card-trip">
             <% if yacht.photos.attached? %>
-              <%= cl_image_tag yacht.photos.first.key,crop: :scale, :class=>"fit"%>
+              <%= cl_image_tag yacht.photos.first.key,:quality=>60, crop: :scale, :class=>"fit"%>
             <% else %>
               <%= image_tag "upload.jpg" %>
             <% end %>

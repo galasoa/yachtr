@@ -17,11 +17,11 @@
 
             <% if photo.id === @yacht.photos.first.id %>
               <div class="carousel-item active">
-                <%= cl_image_tag photo.key, height: 600, crop: :mfit, :class=>"d-block w-100 fit"%>
+                <%= cl_image_tag photo.key,:quality=>60, height: 600, crop: :mfit, :class=>"d-block w-100 fit"%>
               </div>
             <% else %>
               <div class="carousel-item">
-                <%= cl_image_tag photo.key, height: 600, crop: :mfit, :class=>"d-block w-100 fit"%>
+                <%= cl_image_tag photo.key,:quality=>60, height: 600, crop: :mfit, :class=>"d-block w-100 fit"%>
               </div>
             <% end %>
           <% end %>

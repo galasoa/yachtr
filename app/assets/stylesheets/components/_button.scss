@@ -42,6 +42,25 @@
       text-decoration: none;
    }
 }
+.btn-small-dark {
+  display: inline-block;
+  font-weight: lighter;
+  text-align: center;
+  width: 145px;
+  letter-spacing: 2px;
+  font-size: 14px;
+  color: white !important;
+  background-color: $dark-blue;
+  padding: 8px 24px;
+  border-radius: 4px;
+  margin-top: 24px;
+  transition: 0.2s;
+
+   &:hover {
+      box-shadow: 6px 6px rgba(0,0,0,0.2);
+      text-decoration: none;
+   }
+}
 .btn-edit {
   display: inline-block;
   font-weight: 600;
@@ -66,7 +85,7 @@
   letter-spacing: 2px;
   font-size: 8px;
   color: white;
-  background-color: $dark-blue;
+  background-color: #FC0107;
   padding: 8px 24px;
   border-radius: 4px;
   transition: 0.2s;
