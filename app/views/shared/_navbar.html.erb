@@ -4,11 +4,12 @@
   </button>
     <div class="navbar-links d-flex align-items-center mb-0">
         <% if user_signed_in? %>
-          <% if current_user.photo.attached? %>
-            <%= cl_image_tag current_user.photo.key, height: 50, width: 50, crop: :scale, :class=>"avatar navbar-brand mr-3 ml-3"%>
-          <% else %>
+        <%= image_tag "borat", alt: "alttext", class: "avatar navbar-brand mr-3 ml-3"%>
+       <!--    <#% if current_user.photo.attached? %>
+            <%#= cl_image_tag current_user.photo.key, height: 50, width: 50, crop: :scale, class: "avatar navbar-brand mr-3 ml-3"%>
+          <#% else %>
           <a class="avatar navbar-brand mr-3 ml-3" href="#"></a>
-          <% end %>
+          <#% end %> -->
           <%= link_to "Profile & Bookings", pages_profile_path, class: "navbar-brand mr-3 ml-3", style: 'font-size: 16px;' %>
           <%= link_to "Charter", yachts_path, class: "navbar-brand navbar-home mr-3 ml-3", style: 'font-size: 16px;' %>
         <% end %>
