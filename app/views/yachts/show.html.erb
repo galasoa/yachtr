@@ -110,7 +110,7 @@
       <% booked_yachts = bookings.map(&:yacht) %>
       <% if booked_yachts.include?(@yacht) %>
         <br>
-        <%= link_to "Leave a review", new_yacht_review_path(@yacht), class: "btn-small" %>
+        <%= link_to "Leave a review", new_yacht_review_path(@yacht), class: "btn-small-dark" %>
       <% end %>
     <% end %>
 

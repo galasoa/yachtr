@@ -31,7 +31,7 @@
   width: 145px;
   letter-spacing: 2px;
   font-size: 14px;
-  color: white !important;
+  color: white ;
   background-color: $light-blue;
   padding: 8px 24px;
   border-radius: 4px;
@@ -51,7 +51,7 @@
   width: 145px;
   letter-spacing: 2px;
   font-size: 14px;
-  color: white !important;
+  color: white ;
   background-color: $dark-blue;
   padding: 8px 24px;
   border-radius: 4px;
@@ -71,7 +71,7 @@
   letter-spacing: 2px;
   font-size: 8px;
   color: white;
-  background-color: $light-blue;
+  background-color: $dark-blue;
   padding: 8px 24px;
   border-radius: 4px;
   transition: 0.2s;
@@ -79,6 +79,7 @@
    &:hover {
       box-shadow: 6px 6px rgba(0,0,0,0.2);
       text-decoration: none;
+      color: $light-blue;
    }
 }
 .btn-delete {
@@ -96,6 +97,7 @@
    &:hover {
       box-shadow: 6px 6px rgba(0,0,0,0.2);
       text-decoration: none;
+      color: white;
    }
 }
 .margin-none {
