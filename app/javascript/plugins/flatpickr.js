@@ -1,3 +1,4 @@
 import flatpickr from "flatpickr";
-
-flatpickr(".datepicker", {});
+document.addEventListener('turbolinks:load', () => {
+  flatpickr(".datepicker", {});
+});
