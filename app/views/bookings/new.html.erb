@@ -1,15 +1,15 @@
 <br>
-<div class="container">
+<div class="container booking-new">
   <h1>New Booking</h1>
   <br>
   <%= simple_form_for [ @yacht, @booking ] do |f| %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
+    <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"}  %>
   <br>
-  <%= f.submit "BOOK", class: "btn btn-primary" %>
+  <%= f.submit "BOOK", class: "btn-general" %>
   <% end %>
-  <p> <strong>Total Price: </strong> £<span id="price-per-day"><%= number_with_delimiter(@yacht.price) %></span></p>
-</div>
+<!--   <p> <strong>Total Price: </strong> £<span id="price-per-day"><%= number_with_delimiter(@yacht.price) %></span></p>
+ --></div>
 <br>
 <br>
 

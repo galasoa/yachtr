@@ -9,6 +9,8 @@ require("@rails/activestorage").start()
 require("channels")
 
 import { initMapbox } from '../plugins/init_mapbox';
+import "../plugins/flatpickr"
+
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

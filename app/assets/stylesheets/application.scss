@@ -21,6 +21,10 @@
 
 // Partials for bookings
 @import "bookings/index";
+@import "flatpickr/dist/flatpickr";
+@import "flatpickr/dist/themes/material_blue";
+
+
 
 body {
   background: white;
