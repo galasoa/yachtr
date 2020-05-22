@@ -30,3 +30,8 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.main-content {
+  min-height: calc(100vh - 197px); // 100 vh - (sum of navbar + footer)
+  margin-bottom: 5px;
+}
