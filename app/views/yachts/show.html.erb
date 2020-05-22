@@ -76,23 +76,49 @@
   </div>
 
   <div class="reviews">
-    <h2>Reviews</h2>
-    <ul>
-      <% @yacht.reviews.each do |review| %>
-        <li><%= review.content %></li>
-      <% end %>
-    </ul>
-    <%= link_to "Leave a review", new_yacht_review_path(@yacht) %>
+    <!-- if there are no reviews, -->
+    <!-- don't display the reviews header -->
+    <% unless @yacht.reviews.empty? %>
+      <h2 class="sub-header">Reviews</h2>
 
+      <!-- display stars, if there are reviews  -->
       <div class="review-stars">
-      <% @yacht.average_stars.times do |time| %>
-        <i class="fas fa-star"></i>
+        <% @yacht.average_stars.times do |time| %>
+          <i class="fas fa-star"></i>
+        <% end %>
+        <% (5 - @yacht.average_stars).times do |time| %>
+          <i class="far fa-star"></i>
+        <% end %>
+
+      <!-- end of review-stars -->
+      </div>
+
+      <!-- display reviews, if they exist -->
+      <div class="review-content mt-3">
+        <ul>
+          <% @yacht.reviews.each do |review| %>
+            <li><%= review.content %></li>
+          <% end %>
+        </ul>
+      </div>
+
       <% end %>
-      <% (5 - @yacht.average_stars).times do |time| %>
-        <i class="far fa-star"></i>
+      <!-- end of unless statement -->
+
+    <% if current_user %>
+      <% bookings = Booking.all.where(user: current_user) %>
+      <% booked_yachts = bookings.map(&:yacht) %>
+      <% if booked_yachts.include?(@yacht) %>
+        <br>
+        <%= link_to "Leave a review", new_yacht_review_path(@yacht), class: "btn-small" %>
       <% end %>
-    </div>
+    <% end %>
+
+
+  <!-- end of reviews div -->
   </div>
+
+ <!-- end of container -->
 </div>
 
 <%= render 'shared/footer-payment' %>
