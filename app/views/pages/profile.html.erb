@@ -19,7 +19,7 @@
       </ul>
 
       <%= link_to "Add Yacht", new_yacht_path, class: "btn-small" %>
-      <%= link_to "View Yachts", yachts_path, class: "btn-small" %>
+      <%= link_to "View Yachts", yachts_path, class: "btn-small-dark" %>
     </div>
   </div>
 
@@ -40,7 +40,12 @@
         <% @booking.each do |booking| %>
           <div class="booking">
           <div class="card-product">
-            <img src="https://images.unsplash.com/photo-1498994292978-4d6ff757c6dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=917&q=80" />
+            <% if booking.yacht.photos.attached? %>
+              <%= cl_image_tag booking.yacht.photos.first.key,crop: :scale, :class=>"fit"%>
+            <% else %>
+              <%= image_tag "upload.jpg" %>
+            <% end %>
+
             <div class="card-product-infos">
                 <h3><%= booking.yacht.name.upcase %></h3>
                 <ul>
@@ -51,7 +56,7 @@
             </div>
             <div class="buttons d-flex flex-column">
               <%= link_to "Edit", edit_yacht_booking_path(booking.yacht, booking), class: "btn-edit" %>
-              <%= link_to "Cancel", new_yacht_path, class: "btn-delete" %>
+              <%= link_to "Cancel", yachts, class: "btn-delete", method: :delete, data: { confirm: "Are you sure?" }  %>
             </div>
           </div>
           </div>
@@ -75,7 +80,11 @@
         <% @yacht.each do |yacht| %>
           <div class="booking">
           <div class="card-product">
-            <img src="https://images.unsplash.com/photo-1498994292978-4d6ff757c6dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=917&q=80" />
+            <% if yacht.photos.attached? %>
+              <%= cl_image_tag yacht.photos.first.key,:quality=>40,crop: :scale, :class=>"fit"%>
+            <% else %>
+              <%= image_tag "upload.jpg" %>
+            <% end %>
             <div class="card-product-infos">
                 <h3><%= yacht.name.upcase %></h3>
                 <ul>
