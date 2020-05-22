@@ -30,7 +30,12 @@
   padding-right: 16px;
 }
 .profile-bookings a,
-.profile-yachts .book-now-container {
+.profile-yachts{
   text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
 }
 

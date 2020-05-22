@@ -70,7 +70,7 @@
   text-align: center;
   letter-spacing: 2px;
   font-size: 8px;
-  color: white;
+  color: white !important;
   background-color: $dark-blue;
   padding: 8px 24px;
   border-radius: 4px;
@@ -79,7 +79,25 @@
    &:hover {
       box-shadow: 6px 6px rgba(0,0,0,0.2);
       text-decoration: none;
-      color: $light-blue;
+      color: $light-blue !important;
+   }
+}
+.btn-booking {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 8px;
+  color: white !important;
+  background-color: $light-blue;
+  padding: 8px 24px;
+  border-radius: 4px;
+  transition: 0.2s;
+  margin-bottom: 16px;
+   &:hover {
+      box-shadow: 6px 6px rgba(0,0,0,0.2);
+      text-decoration: none;
+      color: $dark-blue !important;
    }
 }
 .btn-delete {
@@ -88,7 +106,7 @@
   text-align: center;
   letter-spacing: 2px;
   font-size: 8px;
-  color: white;
+  color: white !important;
   background-color: #FC0107;
   padding: 8px 24px;
   border-radius: 4px;
@@ -97,7 +115,7 @@
    &:hover {
       box-shadow: 6px 6px rgba(0,0,0,0.2);
       text-decoration: none;
-      color: white;
+      color: white !important;
    }
 }
 .margin-none {
