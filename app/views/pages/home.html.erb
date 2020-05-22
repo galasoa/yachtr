@@ -2,8 +2,8 @@
   <div class="overlay homepagebackgroundimage">
     <div class="inner2 centr d-flex flex-column justify-content-between">
       <h1 class="colormaster"><strong>Yachtr</strong></h1>
-      <div class="btn-general">
-      <%= link_to "See our yachts", yachts_path %>
+      <div>
+      <%= link_to "See our yachts", yachts_path, class: "btn-general" %>
       </div>
       <p>Discover the difference <a href="#my-scroll"><i id="down" class="fas fa-arrow-circle-down"></i></a></p>
 <%= audio_tag("electrochill.mp3", loop: :loop, controls: true, id: "myAudio") %>
@@ -52,8 +52,8 @@
     </div>
 </div>
 
-<div class="py-4">
-  <div class="btn-general">
-    <%= link_to "See our yachts", yachts_path %>
+<div class="py-4 CTA-bottom">
+  <div>
+    <%= link_to "See our yachts", yachts_path, class: "btn-general"  %>
   </div>
 </div>
