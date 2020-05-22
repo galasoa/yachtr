@@ -43,6 +43,10 @@
   display: flex;
   align-items: center;
   margin-bottom: 24px;
+    &:hover {
+      border: 1px solid #E6E6E6;
+      box-shadow: 6px 6px rgba(0,0,0,0.2);
+    }
 }
 
 .card-product img {
