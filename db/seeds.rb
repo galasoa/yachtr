@@ -14,7 +14,7 @@ locations = ["London","Barbados","Monaco","Cote d'Azur","Marrakesh","Saint Trope
 crews = [true,false,true,false,true,false,true,false,true,false]
 capacities = [23,45,65,34,56,98,67,87,69,67]
 prices = [1000000,500000,400000,1500000,30000,48000,380000,900000,870000, 230000]
-User.create(email: "a@a.com", password: "123456")
+User.create(email: "a@a.com", password: "123456", first_name: "Martin", last_name: "Perico")
 
 
 ["Octopus","Luminosity","Barbara","Sunrays","Secret","Lucky Lady","Paraffin","Olivia","Elysian","Blue Eyes London"].each_with_index do |name, index|
