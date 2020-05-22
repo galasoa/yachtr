@@ -21,6 +21,7 @@
    &:hover {
       box-shadow: 6px 6px rgba(0,0,0,0.2);
       text-decoration: none;
+      color: $light-blue;
    }
 }
 .btn-small {
@@ -40,6 +41,7 @@
    &:hover {
       box-shadow: 6px 6px rgba(0,0,0,0.2);
       text-decoration: none;
+      color: $dark-blue;
    }
 }
 .btn-small-dark {
@@ -59,6 +61,7 @@
    &:hover {
       box-shadow: 6px 6px rgba(0,0,0,0.2);
       text-decoration: none;
+      color: $light-blue;
    }
 }
 .btn-edit {
