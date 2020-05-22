@@ -1,23 +1,28 @@
-.footer-background{
+.footer-container{
   background-color: #fafafa;
+  height: 110;
 }
 .footer-payment{
   color: $light-blue;
   text-align: center;
   font-size: 22px;
   letter-spacing: 5px;
-  margin-top: 1px;
 }
 
 .footer-bookings {
   background: #fafafa;
   text-align: center;
-  height: 95px;
 }
 
 .payment-design{
   .fab{
     color: $light-blue;
-    background-color: #fafafa
+    background-color: #fafafa;
+    padding-bottom: 3px;
+
+    &:hover{
+      color: grey;
+    }
   }
 }
+
