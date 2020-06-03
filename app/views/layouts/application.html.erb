@@ -13,6 +13,7 @@
 
   <body>
     <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %>
     <div class="min-height main-content">
       <p class="alert m-0"><%= alert %></p>
       <%= yield %>
@@ -27,4 +28,3 @@
     <% end %>
   </body>
 </html>
-

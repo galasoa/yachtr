@@ -5,6 +5,9 @@
 .card-img-to-right,
 .card-img-to-left {
   display: flex;
+  @media (max-width: 767.98px) {
+      flex-direction: column;
+}
   width: 100vw;
   align-items: center;
 
@@ -22,6 +25,9 @@
   .card-description {
     width: 40%;
     padding: 32px;
+@media (max-width: 767.98px) {
+      width: 100%;
+      padding: 0;}
   }
 
   h2 {

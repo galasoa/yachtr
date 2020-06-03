@@ -23,6 +23,15 @@
       text-decoration: none;
       color: $light-blue;
    }
+   @media (max-width: 767.98px) {
+    width: none;
+    font-size: 12px;
+    padding: 8px;
+    a{
+      width: none;
+      font-size: 12px;
+      padding: 8px;
+    }  }
 }
 .btn-small {
   display: inline-block;

@@ -6,7 +6,7 @@
       <%= link_to "See our yachts", yachts_path, class: "btn-general" %>
       </div>
       <p>Discover the difference <a href="#my-scroll"><i id="down" class="fas fa-arrow-circle-down"></i></a></p>
-<%= audio_tag("electrochill.mp3", loop: :loop, controls: true, id: "myAudio") %>
+    <%= audio_tag("electrochill.mp3", loop: :loop, controls: true, id: "myAudio") %>
     </div>
   </div>
   <%= video_tag "Splash.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home-video" %>
@@ -57,27 +57,6 @@
     <%= link_to "See our yachts", yachts_path, class: "btn-general"  %>
   </div>
 </div>
-
-
-<div class="alert alert-success" id="custom-alert">
-<% if user_signed_in? %>
- <strong>Ahoy Captain!</strong> Signed in successfully.
-   <a data-dismiss="alert" aria-label="Close">
-    <i class="fas fa-times"></i>
-    <% else %>
-    <strong>Ahoy!</strong> Signed out successfully.
-    <% end %>
-    </div>
-
-  <script>
-  const hideMessage = () => {
-    const message = document.getElementById("custom-alert");
-    message.style.display = "none";
-  }
-  setTimeout(function () {
-    hideMessage();
-  }, 5000);
-</script>
 
 
 
